@@ -1,0 +1,595 @@
+<title>Consegna di martedì</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ground: #f6f7f5;
+  --surface: #ffffff;
+  --surface-2: #eef1ed;
+  --line: #d8ded6;
+  --line-soft: #e6eae3;
+  --ink: #1b211c;
+  --ink-2: #4d564e;
+  --ink-3: #737c74;
+  --accent: #2f5741;
+  --accent-soft: #e2ece5;
+  --stop: #9c3324;
+  --stop-soft: #f6e4e0;
+  --wait: #8a6413;
+  --wait-soft: #f6ecd8;
+  --done: #35643f;
+  --done-soft: #e2eee3;
+  --radius: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #141815;
+    --surface: #1b201c;
+    --surface-2: #222823;
+    --line: #333b35;
+    --line-soft: #2a312b;
+    --ink: #e8ece7;
+    --ink-2: #b0b9b1;
+    --ink-3: #838d85;
+    --accent: #8fc0a3;
+    --accent-soft: #22322a;
+    --stop: #e08a79;
+    --stop-soft: #3a2420;
+    --wait: #d7b268;
+    --wait-soft: #342c1b;
+    --done: #8dbd96;
+    --done-soft: #23301f;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground: #141815;
+  --surface: #1b201c;
+  --surface-2: #222823;
+  --line: #333b35;
+  --line-soft: #2a312b;
+  --ink: #e8ece7;
+  --ink-2: #b0b9b1;
+  --ink-3: #838d85;
+  --accent: #8fc0a3;
+  --accent-soft: #22322a;
+  --stop: #e08a79;
+  --stop-soft: #3a2420;
+  --wait: #d7b268;
+  --wait-soft: #342c1b;
+  --done: #8dbd96;
+  --done-soft: #23301f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+h1, h2, h3, .eyebrow, .chip, .num, th {
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------------------------------------------------------- testata */
+
+header.testata {
+  padding: 56px 0 32px;
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: clamp(34px, 5.4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  line-height: 1.02;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.sottotitolo {
+  color: var(--ink-2);
+  margin: 12px 0 0;
+  max-width: 54ch;
+}
+
+.data-blocco {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--ink-3);
+  text-align: right;
+  line-height: 1.9;
+  white-space: nowrap;
+}
+
+.data-blocco b { color: var(--ink); font-weight: 500; }
+
+/* ---------------------------------------------------------- allarme */
+
+.allarme {
+  margin: 28px 0 0;
+  padding: 20px 22px;
+  background: var(--stop-soft);
+  border-left: 3px solid var(--stop);
+  border-radius: var(--radius);
+}
+
+.allarme h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--stop);
+}
+
+.allarme p { margin: 0; color: var(--ink); }
+.allarme p + p { margin-top: 10px; }
+
+/* ---------------------------------------------------------- conteggi */
+
+.conteggi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 28px 0 0;
+  overflow: hidden;
+}
+
+.conteggio {
+  background: var(--surface);
+  padding: 18px 20px;
+}
+
+.conteggio .n {
+  font-family: Archivo, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.conteggio .et {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-top: 8px;
+  display: block;
+}
+
+.n.stop { color: var(--stop); }
+.n.wait { color: var(--wait); }
+.n.done { color: var(--done); }
+
+/* ---------------------------------------------------------- sezioni */
+
+section { margin-top: 56px; }
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+
+h2.titolo-sezione {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.014em;
+  margin: 0 0 6px;
+}
+
+.intro-sezione {
+  color: var(--ink-2);
+  margin: 0 0 22px;
+  max-width: 62ch;
+}
+
+/* ---------------------------------------------------------- voci */
+
+.lista {
+  border-top: 1px solid var(--line);
+}
+
+.voce {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 20px;
+  padding: 16px 0 16px 16px;
+  border-bottom: 1px solid var(--line-soft);
+  border-left: 3px solid transparent;
+  align-items: baseline;
+}
+
+.voce.bloccante { border-left-color: var(--stop); }
+.voce.attesa { border-left-color: var(--wait); }
+.voce.fatto { border-left-color: var(--done); }
+
+.voce h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.006em;
+}
+
+.voce .nota {
+  grid-column: 1 / -1;
+  color: var(--ink-2);
+  font-size: 15.5px;
+  margin: 0;
+  max-width: 64ch;
+}
+
+.voce.fatto h3 { color: var(--ink-2); }
+
+.meta { display: flex; gap: 8px; align-items: center; white-space: nowrap; }
+
+.chip {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+}
+
+.chip.simona { background: var(--wait-soft); color: var(--wait); border-color: currentColor; }
+.chip.tu { background: var(--accent-soft); color: var(--accent); border-color: currentColor; }
+.chip.ok { background: var(--done-soft); color: var(--done); border-color: currentColor; }
+
+.quando {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* ---------------------------------------------------------- sequenza */
+
+.sequenza { counter-reset: passo; border-top: 1px solid var(--line); }
+
+.passo {
+  counter-increment: passo;
+  position: relative;
+  padding: 16px 0 16px 52px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.passo::before {
+  content: counter(passo, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 18px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.passo h3 { font-size: 16.5px; font-weight: 600; margin: 0 0 4px; }
+.passo p { margin: 0; color: var(--ink-2); font-size: 15.5px; max-width: 64ch; }
+
+/* ---------------------------------------------------------- test */
+
+.test {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.test div {
+  padding-left: 26px;
+  position: relative;
+  font-size: 15.5px;
+  color: var(--ink-2);
+}
+
+.test div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--ink-3);
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------------------- rischi */
+
+.rischio {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line-soft);
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 4px 24px;
+}
+
+.rischio .quanto {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 3px;
+}
+
+.alto { color: var(--stop); }
+.medio { color: var(--wait); }
+
+.rischio h3 { font-size: 16.5px; font-weight: 600; margin: 0; }
+.rischio p { grid-column: 2; margin: 4px 0 0; color: var(--ink-2); font-size: 15.5px; max-width: 62ch; }
+
+/* ---------------------------------------------------------- chiusura */
+
+.chiusura {
+  margin-top: 56px;
+  padding: 26px 28px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+}
+
+.chiusura h2 { font-size: 18px; font-weight: 600; margin: 0 0 10px; }
+.chiusura p { margin: 0; color: var(--ink-2); max-width: 66ch; }
+.chiusura p + p { margin-top: 10px; }
+.chiusura strong { color: var(--ink); font-weight: 600; }
+
+@media (max-width: 620px) {
+  .voce { grid-template-columns: 1fr; }
+  .meta { margin-top: 4px; }
+  .rischio { grid-template-columns: 1fr; }
+  .rischio p { grid-column: 1; }
+  .data-blocco { text-align: left; }
+}
+</style>
+
+<div class="wrap">
+
+<header class="testata">
+  <div>
+    <h1>Cosa manca per<br>consegnare martedì</h1>
+    <p class="sottotitolo">Sito e-commerce kokedama. Il tema è pronto e caricato: quello che manca è quasi tutto contenuto, e quasi tutto dipende da Simona.</p>
+  </div>
+  <div class="data-blocco">
+    oggi &nbsp;<b>sab 22 ago</b><br>
+    consegna &nbsp;<b>mar 25 ago</b><br>
+    restano &nbsp;<b>3 giorni</b>
+  </div>
+</header>
+
+<div class="allarme">
+  <h2>Da risolvere entro lunedì</h2>
+  <p>La prova gratuita di Shopify scade <strong>intorno a lunedì 24</strong>. Alla scadenza il negozio si blocca: il lavoro non si perde, ma niente è più visibile né modificabile finché non viene scelto un piano. Con la consegna fissata a martedì, questo va sistemato per primo.</p>
+  <p>Il piano è a carico di Simona, come da accordi. Va scelto da lei, con i suoi dati di fatturazione.</p>
+</div>
+
+<div class="conteggi">
+  <div class="conteggio"><div class="n stop">9</div><span class="et">servono da Simona</span></div>
+  <div class="conteggio"><div class="n wait">6</div><span class="et">da fare io</span></div>
+  <div class="conteggio"><div class="n done">7</div><span class="et">già fatti</span></div>
+  <div class="conteggio"><div class="n">12</div><span class="et">test finali</span></div>
+</div>
+
+<section>
+  <p class="eyebrow">Il collo di bottiglia</p>
+  <h2 class="titolo-sezione">Serve da Simona</h2>
+  <p class="intro-sezione">Senza questi elementi il sito non è consegnabile, e nessuno può produrli al posto suo. Servono <strong>entro domenica sera</strong>: il lunedì serve intero per caricare e provare.</p>
+
+  <div class="lista">
+    <div class="voce bloccante">
+      <h3>Piano Shopify attivato</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro lun 24</span></div>
+      <p class="nota">Altrimenti il negozio si blocca prima della consegna. È il primo domino: se cade, cade tutto il resto.</p>
+    </div>
+
+    <div class="voce bloccante">
+      <h3>Nome definitivo del brand</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro dom 23</span></div>
+      <p class="nota">Ora ovunque compare "Il mio negozio". Il nome entra nell'intestazione, nelle email d'ordine, nei titoli delle pagine e nel dominio: cambiarlo dopo significa rimettere mano a tutto.</p>
+    </div>
+
+    <div class="voce bloccante">
+      <h3>Fotografie dei kokedama</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro dom 23</span></div>
+      <p class="nota">Una foto orizzontale per l'apertura, una del laboratorio, e due o tre per ogni prodotto. Sono l'elemento che decide se il sito sembra vivo o vuoto: nessuna scelta grafica può sostituirle.</p>
+    </div>
+
+    <div class="voce bloccante">
+      <h3>Elenco prodotti completo</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro dom 23</span></div>
+      <p class="nota">Per ciascuno: nome, prezzo, dimensioni, quantità disponibile, descrizione, e se la pianta è tossica per gli animali.</p>
+    </div>
+
+    <div class="voce bloccante">
+      <h3>Costi e zone di spedizione</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro dom 23</span></div>
+      <p class="nota">Quanto costa spedire, dove, in quanti giorni, e da quale soglia eventualmente è gratis. Senza questi dati il carrello non può calcolare il totale, quindi il checkout non funziona.</p>
+    </div>
+
+    <div class="voce bloccante">
+      <h3>Metodo di pagamento configurato</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro dom 23</span></div>
+      <p class="nota">Shopify Payments o PayPal. Richiede dati fiscali e coordinate bancarie, e una verifica d'identità che può richiedere giorni: va avviata subito, non lunedì sera.</p>
+    </div>
+
+    <div class="voce bloccante">
+      <h3>Pagine legali: privacy, cookie, termini, resi</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro lun 24</span></div>
+      <p class="nota">Shopify genera dei modelli, ma vanno adattati alla sua attività e ai suoi dati fiscali. Fuori dal mio incarico, come da accordi: sono questioni legali, non tecniche.</p>
+    </div>
+
+    <div class="voce bloccante">
+      <h3>Email aziendale e profilo Instagram</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">entro dom 23</span></div>
+      <p class="nota">Servono per la pagina Contatti, il footer e le email d'ordine. Nelle pagine ora c'è scritto "[da definire]".</p>
+    </div>
+
+    <div class="voce attesa">
+      <h3>Dominio acquistato</h3>
+      <div class="meta"><span class="chip simona">Simona</span><span class="quando">quando può</span></div>
+      <p class="nota">Non blocca la consegna: si può consegnare sull'indirizzo <span class="quando">.myshopify.com</span> e collegare il dominio dopo. Ma se lo vuole attivo martedì, va comprato entro domenica — il collegamento può richiedere fino a 48 ore.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Lavoro mio</p>
+  <h2 class="titolo-sezione">Da fare, appena sbloccato</h2>
+  <p class="intro-sezione">Le prime tre non dipendono da nessuno e si fanno in mezz'ora, ma richiedono che il tema venga pubblicato. Le altre tre partono solo quando arrivano i materiali.</p>
+
+  <div class="lista">
+    <div class="voce">
+      <h3>Pubblicare il tema</h3>
+      <div class="meta"><span class="chip tu">Io</span><span class="quando">subito</span></div>
+      <p class="nota">Il negozio mostra ancora Horizon, il tema di default. Il nostro è caricato ma in bozza. Finché resta così, i template delle pagine non sono nemmeno selezionabili.</p>
+    </div>
+
+    <div class="voce">
+      <h3>Menu principale e menu del footer</h3>
+      <div class="meta"><span class="chip tu">Io</span><span class="quando">subito</span></div>
+      <p class="nota">Adesso il menu è quello di default: Home, Catalogo, Contatti. Vanno messe le voci vere — Shop, Chi siamo, Cura, Spedizioni, FAQ, Contatti.</p>
+    </div>
+
+    <div class="voce">
+      <h3>Assegnare i template alle cinque pagine</h3>
+      <div class="meta"><span class="chip tu">Io</span><span class="quando">subito</span></div>
+      <p class="nota">Le pagine esistono con i testi, ma usano ancora l'impaginazione standard. I template su misura — FAQ a fisarmonica, Contatti col modulo — sono pronti e in attesa.</p>
+    </div>
+
+    <div class="voce attesa">
+      <h3>Caricare prodotti, foto e collezione</h3>
+      <div class="meta"><span class="chip tu">Io</span><span class="quando">dopo i dati</span></div>
+      <p class="nota">Il grosso del lavoro rimasto. Ogni prodotto con foto, prezzo, misure, disponibilità e descrizione, raccolti nella collezione che alimenta la home.</p>
+    </div>
+
+    <div class="voce attesa">
+      <h3>Completare i testi in sospeso</h3>
+      <div class="meta"><span class="chip tu">Io</span><span class="quando">dopo i dati</span></div>
+      <p class="nota">Nelle pagine ho lasciato dei segnaposto tra parentesi quadre: la storia di Simona in Chi siamo, i costi in Spedizioni, i contatti. Sono cercabili, non ne sfugge nessuno.</p>
+    </div>
+
+    <div class="voce attesa">
+      <h3>Logo, favicon, titoli per Google</h3>
+      <div class="meta"><span class="chip tu">Io</span><span class="quando">dopo i dati</span></div>
+      <p class="nota">Se il logo non c'è, resta il nome scritto in Cormorant — funziona bene e si può aggiungere il logo in seguito senza rifare nulla.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Fatto e verificato</p>
+  <h2 class="titolo-sezione">Quello che è già a posto</h2>
+
+  <div class="lista">
+    <div class="voce fatto"><h3>Tema costruito su Dawn e caricato sul negozio</h3><div class="meta"><span class="chip ok">Fatto</span></div></div>
+    <div class="voce fatto"><h3>Colori, tipografia e impaginazione editoriale</h3><div class="meta"><span class="chip ok">Fatto</span></div></div>
+    <div class="voce fatto"><h3>Home: apertura, manifesto, collezione, storia, cura</h3><div class="meta"><span class="chip ok">Fatto</span></div></div>
+    <div class="voce fatto"><h3>Cinque pagine scritte e pubblicate</h3><div class="meta"><span class="chip ok">Fatto</span></div></div>
+    <div class="voce fatto"><h3>Template di prodotto, collezione, FAQ e contatti</h3><div class="meta"><span class="chip ok">Fatto</span></div></div>
+    <div class="voce fatto"><h3>Riga di comando collegata: modifiche in pochi secondi</h3><div class="meta"><span class="chip ok">Fatto</span></div></div>
+    <div class="voce fatto"><h3>Controllo automatico degli errori prima di ogni caricamento</h3><div class="meta"><span class="chip ok">Fatto</span></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Lunedì, in quest'ordine</p>
+  <h2 class="titolo-sezione">La sequenza di lancio</h2>
+  <p class="intro-sezione">L'ordine conta: ogni passo dipende dal precedente. Saltarne uno significa rifare quelli dopo.</p>
+
+  <div class="sequenza">
+    <div class="passo"><h3>Piano Shopify attivo</h3><p>Prima di tutto: senza, il negozio si blocca e il resto è inutile.</p></div>
+    <div class="passo"><h3>Pubblicare il tema</h3><p>Sblocca i template delle pagine e rende il sito quello vero, non più una bozza.</p></div>
+    <div class="passo"><h3>Menu e template delle pagine</h3><p>La navigazione prende forma: da qui il sito si può percorrere davvero.</p></div>
+    <div class="passo"><h3>Prodotti, foto e prezzi</h3><p>Il momento in cui il sito smette di sembrare vuoto.</p></div>
+    <div class="passo"><h3>Spedizioni e pagamenti</h3><p>Da qui in poi il negozio è tecnicamente in grado di incassare.</p></div>
+    <div class="passo"><h3>Ordine di prova, dall'inizio alla fine</h3><p>Acquisto vero con carta di prova: carrello, checkout, email di conferma. Se qualcosa non va, si scopre qui e non con un cliente vero.</p></div>
+    <div class="passo"><h3>Pagine legali e cookie</h3><p>Obbligatorie prima di vendere a chiunque.</p></div>
+    <div class="passo"><h3>Togliere la password del negozio</h3><p>È questo il gesto che apre il sito al mondo. Ultimo, mai prima.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Prima di dire "consegnato"</p>
+  <h2 class="titolo-sezione">Test finali</h2>
+
+  <div class="test">
+    <div>Sito provato da telefono</div>
+    <div>Menu funzionante</div>
+    <div>Nessun link rotto</div>
+    <div>Prodotti configurati</div>
+    <div>Prezzi verificati</div>
+    <div>Disponibilità corrette</div>
+    <div>Carrello provato</div>
+    <div>Checkout completato</div>
+    <div>Pagamento andato a buon fine</div>
+    <div>Email d'ordine ricevuta</div>
+    <div>Titoli e descrizioni per Google</div>
+    <div>Privacy, cookie e termini online</div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Da tenere d'occhio</p>
+  <h2 class="titolo-sezione">Cosa può far saltare martedì</h2>
+
+  <div>
+    <div class="rischio">
+      <div class="quanto alto">Rischio alto</div>
+      <h3>I materiali arrivano tardi</h3>
+      <p>Se foto e prezzi arrivano lunedì sera, martedì non si consegna. Il caricamento dei prodotti richiede qualche ora, e i test ne richiedono altre. Domenica sera è il limite reale.</p>
+    </div>
+    <div class="rischio">
+      <div class="quanto alto">Rischio alto</div>
+      <h3>La verifica dei pagamenti si allunga</h3>
+      <p>Shopify verifica identità e dati fiscali prima di autorizzare gli incassi. Di solito è veloce, ma può richiedere giorni e non dipende da noi. Va avviata oggi.</p>
+    </div>
+    <div class="rischio">
+      <div class="quanto medio">Rischio medio</div>
+      <h3>Il dominio non è pronto in tempo</h3>
+      <p>Il collegamento può richiedere fino a 48 ore. Si aggira consegnando sull'indirizzo Shopify e agganciando il dominio nei giorni successivi: non è un buon motivo per rimandare tutto.</p>
+    </div>
+    <div class="rischio">
+      <div class="quanto medio">Rischio medio</div>
+      <h3>Le pagine legali restano indietro</h3>
+      <p>Non sono lavoro mio e non posso accelerarle. Si può consegnare il sito completo tenendolo chiuso dalla password finché non ci sono: il lavoro è consegnato, la vendita parte quando è tutto in regola.</p>
+    </div>
+  </div>
+</section>
+
+<div class="chiusura">
+  <h2>Il punto onesto sulla data</h2>
+  <p>Martedì è raggiungibile, ma solo su un binario stretto: <strong>tutto il materiale di Simona entro domenica sera</strong>, e il piano Shopify attivo entro lunedì. Se i materiali slittano, slitta la consegna — non c'è modo di comprimere il caricamento dei prodotti e i test, e consegnare senza averli provati è il modo più rapido per farsi trovare con il carrello rotto davanti a un cliente vero.</p>
+  <p>Un'alternativa sensata, se i tempi si stringono: martedì consegnare il sito <strong>completo ma ancora chiuso dalla password</strong>, con prodotti e test finiti, e aprirlo al pubblico appena pagamenti e pagine legali sono a posto. Il lavoro è consegnato lo stesso, e nessuno pubblica di corsa un negozio che non ha ancora provato.</p>
+  <p>Restano fuori dal compenso, come da accordi iniziali: dominio, abbonamento Shopify, eventuali app a pagamento, e le consulenze legali o fiscali.</p>
+</div>
+
+</div>

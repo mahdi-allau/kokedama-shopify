@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "vetrina",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["serve-vetrina.js", "4320"],
+      "port": 4320
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "occhiello": {
+          "type": "text",
+          "settings": {
+            "text": "Pezzo unico",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 3,
+            "show_inventory_quantity": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "none"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "dettagli": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dettagli",
+            "icon": "ruler",
+            "content": "<p>Altezza e diametro indicativi. Ogni esemplare varia leggermente per forma e colore.</p>",
+            "page": ""
+          }
+        },
+        "cura": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Cura",
+            "icon": "plant",
+            "content": "<p>Immersione in acqua ogni 7&ndash;10 giorni, luce indiretta, nebulizzazione sulle foglie in estate.</p>",
+            "page": "cura-del-kokedama"
+          }
+        },
+        "spedizione": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Consegna e resi",
+            "icon": "truck",
+            "content": "<p>Le piante vive si consegnano a mano a Ferrara e dintorni, entro circa 30 km, oppure si ritirano in laboratorio su appuntamento. Niente corriere: in un pacco chiuso soffrirebbero.</p><p><a href=\"/pages/resi-e-rimborsi\">Come funzionano i resi</a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "occhiello",
+        "title",
+        "price",
+        "inventory",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "dettagli",
+        "cura",
+        "spedizione"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 24
+      }
+    },
+    "correlati": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Altri kokedama",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    }
+  },
+  "order": [
+    "main",
+    "correlati"
+  ]
+}

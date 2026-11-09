@@ -1,0 +1,8 @@
+Copia della struttura del sito, presa da Shopify il 03/11/2026, 12:01:54
+
+A cosa serve: se il negozio Shopify si spegne, vetrina-statica.js non
+puo piu scaricare niente e riparte da questa cartella. Senza, il sito
+non si ricostruisce piu.
+
+Non si modifica a mano: la riscrive vetrina-statica.js a ogni copia
+riuscita. Per provare che funzioni:  node vetrina-statica.js --senza-shopify

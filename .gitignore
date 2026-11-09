@@ -1,0 +1,5 @@
+node_modules/
+kokedama-tema.zip
+*.zip
+.DS_Store
+.claude/settings.local.json

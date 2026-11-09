@@ -1,0 +1,116 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Che cos&rsquo;&egrave; un kokedama?",
+            "icon": "question_mark",
+            "row_content": "<p>&Egrave; una tecnica giapponese: le radici della pianta vengono avvolte in una sfera di terra ricoperta di muschio, al posto del vaso. Pu&ograve; essere appoggiato su un piattino o sospeso.</p>",
+            "page": ""
+          }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Quanto dura?",
+            "icon": "stopwatch",
+            "row_content": "<p>Con le cure giuste pu&ograve; vivere anni. Dopo due o tre anni la sfera pu&ograve; essere rifatta per dare nuovo spazio alle radici.</p>",
+            "page": ""
+          }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ogni quanto devo annaffiarlo?",
+            "icon": "bottle",
+            "row_content": "<p>In media ogni 7&ndash;10 giorni. Il metodo pi&ugrave; affidabile &egrave; il peso: se la sfera &egrave; leggera, &egrave; ora di immergerla.</p>",
+            "page": ""
+          }
+        },
+        "faq_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Posso tenerlo in bagno o in cucina?",
+            "icon": "eye",
+            "row_content": "<p>S&igrave;, se c&rsquo;&egrave; luce naturale. L&rsquo;umidit&agrave; di questi ambienti &egrave; spesso ideale per felci e piante da sottobosco.</p>",
+            "page": ""
+          }
+        },
+        "faq_5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Le piante sono sicure per animali domestici?",
+            "icon": "paw_print",
+            "row_content": "<p>Dipende dalla specie. Nella scheda di ogni prodotto indichiamo se la pianta &egrave; tossica in caso di ingestione.</p>",
+            "page": ""
+          }
+        },
+        "faq_6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Posso ordinare un kokedama personalizzato?",
+            "icon": "heart",
+            "row_content": "<p>S&igrave;, scrivici dalla pagina Contatti indicando pianta, dimensione e occasione.</p>",
+            "page": ""
+          }
+        },
+        "faq_7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fate confezioni regalo?",
+            "icon": "box",
+            "row_content": "<p>Su richiesta, con biglietto scritto a mano. Puoi segnalarlo nelle note dell&rsquo;ordine.</p>",
+            "page": ""
+          }
+        },
+        "faq_8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Spedite anche i kokedama vivi?",
+            "icon": "truck",
+            "row_content": "<p>No: le piante vive le consegniamo a mano a Ferrara e dintorni, oppure si ritirano in laboratorio su appuntamento. In un pacco chiuso, soprattutto d&rsquo;estate, soffrirebbero troppo. La collezione stabilizzata invece la spedisco in tutta Italia.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
+      "settings": {
+        "caption": "Domande frequenti",
+        "heading": "Le risposte alle domande pi&ugrave; comuni",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 16,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq"
+  ]
+}

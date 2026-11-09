@@ -1,0 +1,191 @@
+/* Aggiunte della vetrina. Tutto il resto e il tema vero. */
+
+.vetrina-ordine {
+  margin: 2.4rem 0 1.2rem;
+}
+
+/* Il pulsante WhatsApp prende il posto di "Aggiungi al carrello": stesso
+   peso visivo, perche e l'unica azione rimasta sulla pagina. */
+.vetrina-ordine .button {
+  width: 100%;
+  min-height: 5.2rem;
+}
+
+.vetrina-nota {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+/* Senza il form, il selettore della taglia resta senza respiro sotto. */
+[data-vetrina-taglie] fieldset {
+  margin-bottom: 1.6rem;
+}
+
+/* Tutte le schede della stessa forma: la griglia deve essere dritta, con i
+   titoli allineati. Lasciare che ogni foto dettasse la sua altezza aveva
+   prodotto una scacchiera, perche le foto dei sospesi sono piu allungate di
+   quelle delle piante appoggiate. Chi guarda vede prima il disordine della
+   griglia che le piante. */
+.card-wrapper .card__inner {
+  aspect-ratio: 3 / 4;
+}
+
+/* I riquadri dei Contatti. Il disegno approvato da Simona mette ogni cosa
+   nella sua scatola, cosi si legge una per volta invece che tutto di fila.
+   I colori sono quelli del sito, non quelli del disegno: li erano scritti a
+   mano e non andavano d'accordo con il resto delle pagine. */
+.vetrina-schede {
+  display: grid;
+  gap: 1.6rem;
+  margin: 3.2rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .vetrina-schede {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* La pagina Contatti ha un contenitore stretto, pensato per il testo:
+     i riquadri ci stavano a 231px l uno, illeggibili. Qui escono dal
+     contenitore e arrivano a 1100px, come nel disegno approvato. */
+  .vetrina-schede {
+    width: min(110rem, 100vw - 4.8rem);
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .vetrina-schede--due {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.vetrina-scheda {
+  background: #f4f1ea;
+  border-radius: 1.8rem;
+  padding: 2.8rem;
+}
+
+.vetrina-scheda h2 {
+  font-size: 2.4rem;
+  margin: 0 0 1.2rem;
+}
+
+.vetrina-scheda p {
+  margin: 0 0 1.2rem;
+}
+
+.vetrina-scheda p:last-child {
+  margin-bottom: 0;
+}
+
+.vetrina-piccolo {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.vetrina-scheda .button {
+  margin-top: 0.4rem;
+}
+
+/* I due formati del workshop, uno accanto all'altro su schermo largo e uno
+   sotto l'altro sul telefono. */
+.vetrina-formati {
+  display: grid;
+  gap: 2.4rem;
+  margin: 3.2rem 0 4.8rem;
+}
+
+@media screen and (min-width: 750px) {
+  .vetrina-formati {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.vetrina-formati figure {
+  margin: 0;
+}
+
+/* Le illustrazioni hanno il fondo bianco e la pagina e color crema: senza
+   questo si vedrebbero due rettangoli bianchi appiccicati sopra. Il
+   "multiply" fa sparire il bianco e lascia solo il disegno. */
+.vetrina-formati img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.vetrina-formati figcaption {
+  margin-top: 0.8rem;
+  font-family: var(--font-heading-family);
+  font-size: 1.9rem;
+  line-height: 1.4;
+}
+
+/* Il video del laboratorio. E girato a 480x480: oltre quella misura si
+   sgrana, quindi non lo si allarga mai piu di cosi, nemmeno su schermi
+   grandi. Il bordo tondo e lo stesso dei riquadri dei contatti. */
+.vetrina-video {
+  margin: 0 0 4.8rem;
+  max-width: 48rem;
+}
+
+.vetrina-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.8rem;
+  background: #e8e3d8;
+}
+
+.vetrina-video figcaption {
+  margin-top: 0.8rem;
+  font-family: var(--font-heading-family);
+  font-size: 1.9rem;
+  line-height: 1.4;
+}
+
+/* Instagram e TikTok sotto i contatti: il disegno lo fa gia Dawn con
+   .list-social, qui serve solo staccarli dal testo sopra. */
+.footer .vetrina-social.list-social {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  /* Dawn centra le icone social; qui la colonna e allineata a sinistra
+     come il testo sopra, e centrarle le faceva sembrare fuori posto. */
+  justify-content: flex-start;
+  margin-left: -0.8rem;
+}
+
+/* L'apertura della home era la foto del terrazzo, con le persone
+   all'aperitivo. Via anche quella: al suo posto una pianta, che poi e la cosa
+   che si vende. Quattro classi per battere la regola del tema, come tutte le
+   altre foto di sfondo (vedi la trappola 21 in AGENTS.md).
+   Le foto terrazzo-*.jpg non vengono nemmeno piu copiate. */
+[id$="__banner"] .image-with-text__media.background-transparent.global-media-settings {
+  background-image: url("../immagini/apertura-ficus-sospeso.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* La foto della pianta e verticale (1024x1536), l'apertura di Dawn e una
+   fascia larga e bassa: dentro 752x357 si vedeva solo una striscia ingrandita
+   del tronco. Si alza il riquadro, cosi la pianta ci sta quasi tutta.
+   Quattro classi perche la regola di Dawn sull'altezza ne ha tre. */
+[id$="__banner"] .image-with-text__media.background-transparent.global-media-settings {
+  height: 68rem;
+}
+
+[id$="__banner"] .image-with-text__media img {
+  object-position: center 55%;
+}
+
+@media screen and (max-width: 749px) {
+  [id$="__banner"] .image-with-text__media.background-transparent.global-media-settings {
+    height: 42rem;
+  }
+}

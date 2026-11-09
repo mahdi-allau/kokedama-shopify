@@ -1,0 +1,323 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "image-with-text",
+      "blocks": {
+        "occhiello": {
+          "type": "caption",
+          "settings": {
+            "caption": "Fatti a mano a Ferrara",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "titolo": {
+          "type": "heading",
+          "settings": {
+            "heading": "Piante che abbracciano.",
+            "heading_size": "h0"
+          }
+        },
+        "testo": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kokedama fatti a mano, per portare un pezzo di bosco in casa.</p>",
+            "text_style": "body"
+          }
+        },
+        "bottone": {
+          "type": "button",
+          "settings": {
+            "button_label": "Scopri la collezione",
+            "button_link": "/collections/laboratorio-ferrara",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "occhiello",
+        "titolo",
+        "testo",
+        "bottone"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_9_set_2026_00_29_58.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "ambient",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cosa_e": {
+      "type": "rich-text",
+      "blocks": {
+        "occhiello": {
+          "type": "caption",
+          "settings": {
+            "caption": "In giapponese, palla di muschio",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "titolo": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cos&rsquo;&egrave; un kokedama?",
+            "heading_size": "h1"
+          }
+        },
+        "testo": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Una pianta avvolta da terra, muschio e spago. Vive sospesa o appoggiata su un piatto.</p><p>Non serve il pollice verde: bastano un po&rsquo; d&rsquo;acqua e la luce giusta. Ogni pezzo &egrave; unico e creato a mano a Ferrara.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "occhiello",
+        "titolo",
+        "testo"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "cosa_troverai": {
+      "type": "multicolumn",
+      "blocks": {
+        "interno": {
+          "type": "column",
+          "settings": {
+            "title": "Kokedama da interno",
+            "text": "<p>Per il salotto e la camera da letto. Piante vive, fatte a mano una per una.</p>",
+            "link_label": "Guarda i kokedama vivi",
+            "link": "/collections/laboratorio-ferrara"
+          }
+        },
+        "stabilizzati": {
+          "type": "column",
+          "settings": {
+            "title": "Kokedama stabilizzati",
+            "text": "<p>Non chiedono acqua n&eacute; luce. Per un bagno cieco, un ufficio, un negozio.</p>",
+            "link_label": "Guarda gli stabilizzati",
+            "link": "/collections/collezione-stabilizzata"
+          }
+        },
+        "workshop": {
+          "type": "column",
+          "settings": {
+            "title": "Workshop",
+            "text": "<p>Se vuoi provare a crearne uno tu: a casa tua o sul terrazzo, in due ore.</p>",
+            "link_label": "Scopri i workshop",
+            "link": "/pages/workshop-kokedama-vivi"
+          }
+        }
+      },
+      "block_order": [
+        "interno",
+        "stabilizzati",
+        "workshop"
+      ],
+      "settings": {
+        "title": "Cosa troverai",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 88,
+        "padding_bottom": 72
+      }
+    },
+    "in_evidenza": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "laboratorio-ferrara",
+        "products_to_show": 6,
+        "title": "Dal laboratorio di Ferrara",
+        "heading_size": "hxl",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 72
+      }
+    },
+    "stabilizzata": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "collezione-stabilizzata",
+        "products_to_show": 4,
+        "title": "Kokedama stabilizzati",
+        "heading_size": "hxl",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "columns_desktop": 2,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "color_scheme": "scheme-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "terrazzo": {
+      "type": "image-with-text",
+      "blocks": {
+        "occhiello": {
+          "type": "caption",
+          "settings": {
+            "caption": "Il laboratorio",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        },
+        "titolo": {
+          "type": "heading",
+          "settings": {
+            "heading": "Il terrazzo",
+            "heading_size": "h1"
+          }
+        },
+        "testo": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Un tavolo di legno, la terra sotto le unghie, una tisana calda. In due ore impari un gesto antico e torni a casa con il tuo giardino sospeso, fatto da te.</p><p>Gruppi da massimo sei persone, nel cuore di Ferrara. L&rsquo;indirizzo te lo dico al momento della prenotazione.</p>",
+            "text_style": "body"
+          }
+        },
+        "bottone": {
+          "type": "button",
+          "settings": {
+            "button_label": "Prenota su WhatsApp",
+            "button_link": "https://wa.me/393478202607",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "occhiello",
+        "titolo",
+        "testo",
+        "bottone"
+      ],
+      "settings": {
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "ambient",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "chiusura": {
+      "type": "rich-text",
+      "blocks": {
+        "titolo": {
+          "type": "heading",
+          "settings": {
+            "heading": "Se ne vedi uno che ti parla, &egrave; tuo.",
+            "heading_size": "h1"
+          }
+        },
+        "testo": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ogni kokedama &egrave; fatto per durare, con piante scelte per stare bene in casa.</p><p>Consegna a mano a Ferrara e dintorni. Gli stabilizzati li spedisco in tutta Italia.</p>"
+          }
+        },
+        "bottone": {
+          "type": "button",
+          "settings": {
+            "button_label": "Scrivimi su WhatsApp",
+            "button_link": "https://wa.me/393478202607",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "titolo",
+        "testo",
+        "bottone"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "cosa_e",
+    "cosa_troverai",
+    "in_evidenza",
+    "stabilizzata",
+    "terrazzo",
+    "chiusura"
+  ]
+}
